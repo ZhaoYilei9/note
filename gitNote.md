@@ -31,3 +31,10 @@
 
 #### 工作目录下的每一个文件都不外乎这两种状态：已跟踪或未跟踪 
 
+###检查当前文件状态
+####克隆仓库后立即使用此命令
+$ git status
+On branch master
+nothing to commit, working directory clean
+
+
