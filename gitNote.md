@@ -37,4 +37,25 @@ $ git status
 On branch master
 nothing to commit, working directory clean
 
+### github的ssh key配置
+
+#### 生成SSH Key
+
+##### ssh-keygen -t rsa -C "your_email@example.com" 
+
+### 测试SSH Key登录
+
+ssh -T git@github.com 
+
+可能结果：
+
+​		`Agent` admitted failure to sign using the key. 						debug1: No more authentication methods to try. Permission d			enied (publickey). 
+
+上面的错误在某些Linux发行版（比如我的Fedora 17）是一个已知的错误， 可以忽略。 然后会看到打印出公钥的指纹，请确认此指纹和你公钥的一致，然后输入"yes"确认 
+
+​	" Hi your_name! You've successfully authenticated, but GitHub does not provide shell access." 
+
+
+
+
 
