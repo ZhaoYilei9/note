@@ -2,11 +2,11 @@
 
 ### 运行前的配置：
 
-#### $ git config --global user.name "John Doe"
+#### $ git config --global user.name "ZhaoYilei9"
 
 
 
-#### $ git config --global user.email johndoe@example.com
+#### $ git config --global user.email zyl17763238627@gmail.com
 
 
 
