@@ -12,9 +12,13 @@
 
 ⑥solr 和solrhome建立联系:修改solr的web.xml
 
-​	<env-entry>
+​	
+
+```
+<env-entry>
        <env-entry-name>solr/home</env-entry-name>
        <env-entry-value>/usr/local/solr/solrhome</env-entry-value>
        <env-entry-type>java.lang.String</env-entry-type>
     </env-entry>
+```
 

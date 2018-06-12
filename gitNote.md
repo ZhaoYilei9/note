@@ -54,7 +54,7 @@ ssh -T git@github.com
 上面的错误在某些Linux发行版（比如我的Fedora 17）是一个已知的错误， 可以忽略。 然后会看到打印出公钥的指纹，请确认此指纹和你公钥的一致，然后输入"yes"确认 
 
 ​	" Hi your_name! You've successfully authenticated, but GitHub does not provide shell access." 
-#正确
+#貌似要以ssh方式克隆才会起作用
 
 
 
