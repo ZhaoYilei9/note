@@ -51,5 +51,8 @@ cp IKAnalyzer.cfg.xml ext_stopword.dic mydict.dic /usr/local/solr/tomcat/webapps
 /usr/local/solr/solrhome/collection1/conf/schema.xml
 ```
 
-​	只有textFiled才能指定分析器
+​	只有textFiled才能指定分析器,既分词又实现索引
 
+​	string 不分词但实现索引：身份证号，订单号，分类名称
+
+​	keyword 一般为复制域，
