@@ -6,5 +6,5 @@ GRANT ALL PRIVILEGES ON *.* TO ['root'@'%'](mailto:'root'@'%') IDENTIFIED BY '
 
 ### 设置密码 
 
-SET PASSWORD FOR ['root'@'localhost'](mailto:'root'@'localhost') = PASSWORD('newpass'); 
+SET PASSWORD FOR ['root'@'localhost'](mailto:'root'@'localhost') = PASSWORD('1234'); 
 
