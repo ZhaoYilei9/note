@@ -41,7 +41,7 @@ nothing to commit, working directory clean
 
 #### 生成SSH Key
 
-##### ssh-keygen -t rsa -C "your_email@example.com" 
+##### ssh-keygen -t rsa -C "zyl17763238627@gmail.com" 
 
 ### 测试SSH Key登录
 
