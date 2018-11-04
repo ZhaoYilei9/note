@@ -1,0 +1,15 @@
+ ShadowsocksR账号 配置信息：
+
+ I  P	    : 144.34.168.155
+ 端口	    : 2333
+ 密码	    : doub.io
+ 加密	    : aes-128-ctr
+ 协议	    : auth_sha1_v4_compatible
+ 混淆	    : plain
+ 设备数限制 : 0(无限)
+ 单线程限速 : 0 KB/S
+ 端口总限速 : 0 KB/S
+ SS    链接 : ss://YWVzLTEyOC1jdHI6ZG91Yi5pb0AxNDQuMzQuMTY4LjE1NToyMzMz 
+ SS  二维码 : http://doub.pw/qr/qr.php?text=ss://YWVzLTEyOC1jdHI6ZG91Yi5pb0AxNDQuMzQuMTY4LjE1NToyMzMz
+ SSR   链接 : ssr://MTQ0LjM0LjE2OC4xNTU6MjMzMzphdXRoX3NoYTFfdjQ6YWVzLTEyOC1jdHI6cGxhaW46Wkc5MVlpNXBidw 
+ SSR 二维码 : http://doub.pw/qr/qr.php?text=ssr://MTQ0LjM0LjE2OC4xNTU6MjMzMzphdXRoX3NoYTFfdjQ6YWVzLTEyOC1jdHI6cGxhaW46Wkc5MVlpNXBidw 
