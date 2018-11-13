@@ -106,3 +106,85 @@ redis单线程照样快,不适合存大数据,适合缓存，能快速处理完�
 
 ​			===>cluster-enabled=yes
 
+###　开机自启动
+
+```
+[root@localhost ~]# vi /etc/init.d/redis
+```
+
+```
+复制下面代码到脚本中(注意要修改里面redis的安装路径,不清楚find查找下)
+(这段代码就是redis根目录 /utils/redis_init_script 启动脚本的代码)
+```
+
+```
+#!/bin/sh
+# chkconfig: 2345 10 90  
+# description: Start and Stop redis   
+
+REDISPORT=6379
+EXEC=/usr/local/bin/redis-server
+CLIEXEC=/usr/local/bin/redis-server
+
+PIDFILE=/var/run/redis_${REDISPORT}.pid
+CONF="/etc/redis/redis.conf"
+
+case "$1" in
+    start)
+        if [ -f $PIDFILE ]
+        then
+                echo "$PIDFILE exists, process is already running or crashed"
+        else
+                echo "Starting Redis server..."
+                $EXEC $CONF &
+        fi
+        ;;
+    stop)
+        if [ ! -f $PIDFILE ]
+        then
+                echo "$PIDFILE does not exist, process is not running"
+        else
+                PID=$(cat $PIDFILE)
+                echo "Stopping ..."
+                $CLIEXEC -p $REDISPORT shutdown
+                while [ -x /proc/${PID} ]
+                do
+                    echo "Waiting for Redis to shutdown ..."
+                    sleep 1
+                done
+                echo "Redis stopped"
+        fi
+        ;;
+    restart)
+        "$0" stop
+        sleep 3
+        "$0" start
+        ;;
+    *)
+        echo "Please use start or stop or restart as first argument"
+        ;;
+esac
+```
+
+设置权限
+
+```
+[root@localhost ~]# chmod 777 /etc/init.d/redis
+ 
+```
+
+设置开机启动
+
+```
+ chkconfig redis on
+ 
+```
+
+启动测试
+
+```
+ service start redis
+```
+
+
+
