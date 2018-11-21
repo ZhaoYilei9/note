@@ -56,6 +56,42 @@ ssh -T git@github.com
 ​	" Hi your_name! You've successfully authenticated, but GitHub does not provide shell access." 
 #貌似要以ssh方式克隆才会起作用
 
+第一次上传代码时出现以下错误：
+
+D:\java_projects\test>git push origin master
+To https://git.oschina.net/qingke3/tom.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://git.oschina.net/qingke3/tom.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+1
+2
+3
+4
+5
+6
+7
+8
+原因：远程代码库有某些文件本地代码库中不存在，会有冲突的隐患。 
+解决方法：需要先执行git pull的操作，把远程代码先拿下来，如下：
+
+D:\java_projects\test>git pull origin master
+From https://git.oschina.net/qingke3/tom
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+1
+2
+3
+4
+这时还是有错误，这是因为git拒绝合并无关的历史纪录，解决方法是在git pull时加上–allow-unrelated-histories，如下：
+
+git pull origin master --allow-unrelated-histories
+1
+最后在push即可
+
+
 
 
 
