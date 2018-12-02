@@ -54,8 +54,10 @@ git clone https://github.com/ssrbackup/shadowsocksr
 
 进入到shadowsocksr/shadowsocks/目录里面，执行：
 
+nohup可以关闭终端依然运行，&后台运行
+
 ```
-python local.py -c /etc/shadowsocks.json
+nohup python local.py -c /etc/shadowsocks.json &
 ```
 
 出现下面的提示,说明运行成功
@@ -67,7 +69,7 @@ python local.py -c /etc/shadowsocks.json
 2017-10-17 12:30:57 INFO     util.py:85 loading libcrypto from libcrypto.so.1.0.0
 ```
 
-#### 结合SwitchyOmega 使用
+#### 结合firefox浏览器的SwitchyOmega 使用
 
 上面的步骤其中的配置项有两个要注意：
 
@@ -79,12 +81,20 @@ python local.py -c /etc/shadowsocks.json
 说明SSR客户端运行本地的127.0.0.1 IP， 监听端口1080
  所以再SwitchyOmega里面的配置就是
 
- 
+ ![](/home/zyl/github/note/images/ssr/2018-12-02 15-47-35 的屏幕截图.png)
 
  
 
- 
+ ![](/home/zyl/github/note/images/ssr/2018-12-02 15-48-47 的屏幕截图.png)
 
- 
+ 规则列表
 
- 
+```
+https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+```
+
+不要忘了点
+
+### 应用选项
+
+奥 
