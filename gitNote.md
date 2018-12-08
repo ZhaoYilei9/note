@@ -47,7 +47,10 @@ nothing to commit, working directory clean
 
 ssh -T git@github.com 
 
-可能结果：
+### 添加远程仓库
+git remote add origin 仓库地址
+
+### git pull 的可能结果：
 
 ​		`Agent` admitted failure to sign using the key. 						debug1: No more authentication methods to try. Permission d			enied (publickey). 
 
